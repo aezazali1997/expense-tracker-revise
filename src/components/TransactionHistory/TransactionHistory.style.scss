@@ -1,0 +1,10 @@
+.list-item{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba($color: #000000, $alpha: .2);
+  padding:5px 10px;
+}
+.color{
+  color: red;
+  background-color: red;
+}
