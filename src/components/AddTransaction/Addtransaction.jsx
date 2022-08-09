@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import { useContext } from "react";
+import { GlobalContext } from "../../context/transactionContext";
 export const Addtransaction = () => {
   const [amount, setAmount] = useState(0);
   const [description, setDescription] = useState("");
+  const globalContext = useContext(GlobalContext);
+  const { addTrans } = globalContext;
   return (
     <div>
       <h1>Add transaction</h1>
@@ -21,10 +25,10 @@ export const Addtransaction = () => {
       <br />
       <button
         onClick={() => {
-          // addTrans({
-          //   description: description,
-          //   cost: amount,
-          // });
+          addTrans({
+            description: description,
+            cost: amount,
+          });
         }}
       >
         {" "}
